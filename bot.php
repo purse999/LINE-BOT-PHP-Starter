@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			//Get group id
-			$groupid = $Group['groupId'];
+			$groupid = $event['source']['groupId'];
 
 			// Build message to reply back
 			$messages = [
@@ -46,4 +46,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "OK1";
+echo "OK";

@@ -10,7 +10,7 @@ $data = [
 		'messages' => [$messages],
 	];
 $post = json_encode($data);
-$headers = array('Authorization: Bearer ' . $access_token);
+$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
